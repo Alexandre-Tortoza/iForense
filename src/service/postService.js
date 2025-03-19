@@ -21,7 +21,8 @@ export async function getAllPosts() {
     console.error(error);
   } finally {
     /* Vou adicionar um setTimeout para
-     * simular um delay de 1 segundo
+     * simular um delay de 1 segundo, se não
+     * ele aparece e some muito rapido
      */
     setTimeout(() => {
       isLoading.value = false;

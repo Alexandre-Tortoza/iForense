@@ -1,4 +1,3 @@
-```vue
 <template>
   <teleport to="body">
     <div
@@ -18,4 +17,3 @@ defineProps({
   },
 });
 </script>
-```

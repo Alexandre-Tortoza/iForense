@@ -1,5 +1,49 @@
-# Vue 3 + Vite
+# iForense - Teste Técnico Frontend Jr Vue.js
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Este projeto foi desenvolvido como parte do teste técnico para a vaga de Frontend Jr, utilizando Vue.js 3 com Composition API.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Requisitos do Projeto
+
+O projeto atende aos seguintes requisitos:
+
+1. **Consumo de API**
+
+   - Utiliza a API pública JSONPlaceholder (https://jsonplaceholder.typicode.com/posts)
+   - Implementa loading state durante o carregamento dos dados
+   - Tratamento de erros na requisição
+
+2. **Visualização dos Dados**
+
+   - Exibe os posts em dois formatos:
+     - Tabela: mostra ID, título e corpo do post
+     - Cards: apresenta título e corpo do post em formato de cards
+   - Botão para alternar entre os modos de visualização
+
+3. **Tecnologias Utilizadas**
+
+   - Vue.js 3 com Composition API
+   - Tailwind CSS para estilização
+   - Axios para requisições HTTP
+   - Vite como bundler
+
+4. **Estrutura do Projeto**
+   - Componentes reutilizáveis
+   - Gerenciamento de estado com Composition API
+   - Serviços separados para chamadas à API
+   - Layout responsivo
+
+## Instalação e Execução
+
+1. Clone o repositório
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Execute o projeto em modo de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+4. Para build de produção:
+   ```bash
+   npm run build
+   ```
