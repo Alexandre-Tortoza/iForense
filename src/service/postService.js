@@ -17,8 +17,36 @@ export async function getAllPosts() {
   try {
     response = await apiClient.get("/posts");
   } catch (error) {
-    // console.error('Erro na Request "/posts" ',error);
-    console.error(error);
+    /**
+     * Esse trecho foi adicionado depois da entrega
+     */
+    if (error.response) {
+      const status = error.response.status;
+      switch (status) {
+        case 400:
+          console.error("Erro 400: Requisição inválida.");
+          break;
+        case 404:
+          console.error("Erro 404: Posts não encontrados.");
+          break;
+        case 500:
+          console.error("Erro 500: Erro interno do servidor.");
+          break;
+        default:
+          console.error(`Erro ${status}: Problema inesperado na requisição.`);
+      }
+    } else if (error.request) {
+      console.error("Erro de rede: Sem conexão com o servidor.");
+    } else {
+      console.error("Erro desconhecido:", error.message);
+    }
+
+    /**
+     * Essa parte poderia ser um Toast para o usuário
+     * para facilitar poderia usar uma lib como
+     * Notiflix ou SWAL2
+     */
+    return null;
   } finally {
     /* Vou adicionar um setTimeout para
      * simular um delay de 1 segundo, se não
